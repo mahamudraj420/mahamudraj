@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  --black: #101214;
+  --panel: #171b1f;
+  --gold: #d6b15e;
+  --white: #f8f7f3;
+  --muted: #aeb4ba;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; padding: 28px 16px;
+  display: grid; place-items: center;
+  background: radial-gradient(circle at top, #30343a 0, #171a1e 45%, #0c0e10 100%);
+  color: var(--white); font-family: 'DM Sans', Arial, sans-serif;
+}
+.card {
+  width: min(100%, 430px); overflow: hidden; border-radius: 24px;
+  background: #f8f7f3; color: #202326;
+  box-shadow: 0 24px 80px #0008; border: 1px solid #ffffff20;
+}
+.topbar {
+  background: var(--black); padding: 22px 25px; display: flex;
+  align-items: center; justify-content: space-between;
+  border-bottom: 1px solid #ffffff12;
+}
+.brand { color: white; font-size: 30px; font-weight: 700; letter-spacing: -2px; }
+.brand span { color: var(--gold); }
+.top-label { color: #d7d9db; font-size: 9px; letter-spacing: 1.8px; }
+.hero {
+  text-align: center; padding: 34px 22px 27px;
+  background: linear-gradient(145deg, #1b2229, #101418);
+  color: white;
+}
+.avatar {
+  width: 116px; height: 116px; object-fit: cover; border-radius: 50%;
+  border: 3px solid var(--gold); padding: 4px; background: #222a30;
+}
+.eyebrow { color: var(--gold); font-size: 9px; letter-spacing: 2px; margin: 18px 0 8px; }
+h1 { font: 700 30px 'Playfair Display', Georgia, serif; margin: 0 0 8px; }
+.role { margin: 0; font-size: 14px; color: #f0f0ed; }
+.role span { color: var(--gold); }
+.company { margin: 8px 0 0; color: #b9c0c6; font-size: 13px; }
+.gold-rule { width: 54px; height: 2px; background: var(--gold); margin: 22px auto 0; }
+.contact-info { padding: 23px 26px 12px; background: #f8f7f3; }
+.info-row { display: flex; gap: 13px; align-items: flex-start; margin-bottom: 17px; }
+.info-icon { color: #98752c; font-size: 20px; width: 22px; text-align: center; }
+.info-row div { display: grid; gap: 4px; }
+.info-row strong { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8a7446; }
+.info-row span, .info-row a { font-size: 13px; line-height: 1.55; color: #343a40; text-decoration: none; }
+.actions { padding: 12px 24px 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8f7f3; }
+.action {
+  min-height: 47px; display: flex; align-items: center; justify-content: center; gap: 9px;
+  border: 1px solid #d9d6ce; border-radius: 11px; padding: 12px 10px;
+  background: white; color: #252a2e; text-decoration: none; font: 600 13px 'DM Sans', Arial, sans-serif;
+  cursor: pointer; transition: transform .18s ease, box-shadow .18s ease;
+}
+.action:hover { transform: translateY(-2px); box-shadow: 0 7px 18px #00000012; }
+.action span { font-size: 16px; }
+.action.primary { background: #171d22; color: white; border-color: #171d22; }
+.action.whatsapp { background: #176b48; color: white; border-color: #176b48; }
+.action.facebook { background: #2059a5; color: white; border-color: #2059a5; }
+.action.gold { background: #d6b15e; color: #171717; border-color: #d6b15e; }
+footer { text-align: center; background: #eceae4; padding: 18px 12px; color: #656a6e; }
+footer p { margin: 0 0 5px; font-size: 12px; font-weight: 600; }
+footer small { display: block; font-size: 10px; line-height: 1.7; }
+footer .notice { color: #85898d; margin-top: 5px; }
+@media (max-width: 360px) {
+  body { padding: 12px 8px; }
+  .topbar { padding: 18px; }
+  .top-label { font-size: 8px; }
+  h1 { font-size: 26px; }
+  .actions { padding-inline: 16px; }
+}
